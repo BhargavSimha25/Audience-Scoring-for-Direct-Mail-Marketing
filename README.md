@@ -31,56 +31,51 @@ The analysis utilized two main datasets, joined on `Gold_Cust_ID`:
 ### Target Variable: Influenced (1/0)
 A customer was marked as **Influenced (1)** if they made a purchase transaction within **30 days** after the `DM Mail Date`. The 30-day window was defined as the business's assumption for measuring influence.
 
-[cite_start]$$\text{Target} = 1 \text{ if } (\text{Tran\_Dt} > \text{Last\_Mailing\_Date}) \text{ AND } (\text{Tran\_Dt} \le \text{Last\_Mailing\_Date} + 30)$$ [cite: 17, 18, 19]
+Target=1 if (Tran_Dt>Last_Mailing_Date) AND (Tran_Dt≤Last_Mailing_Date+30)
 
 ### Key Features
-[cite_start]Aggregated transaction-level data to create customer-level features[cite: 53].
+Aggregated transaction-level data to create customer-level features.
 
-* [cite_start]**RFM Metrics**: Constructed **Recency, Frequency, and Monetary** features from transaction history[cite: 8, 12].
-    * [cite_start]*Insight*: Frequent customers tended to spend more[cite: 9].
-* [cite_start]**Last Mailing Recency**: Created a feature for the 'Recency of Last Mailing'[cite: 14].
-* [cite_start]Missing values were handled using a $\text{max} + 1$ strategy[cite: 15].
+* **RFM Metrics**: Constructed **Recency, Frequency, and Monetary** features from transaction history.
+    * *Insight*: Frequent customers tended to spend more.
+* **Last Mailing Recency**: Created a feature for the 'Recency of Last Mailing'.
+* Missing values were handled using a max+1 strategy.
 
 ---
 
 ## 🤖 Modeling & Evaluation
 
 ### Models Trained
-[cite_start]Several classification models were trained and evaluated on the engineered features[cite: 21, 22]:
-* [cite_start]Logistic Regression [cite: 21]
-* [cite_start]Decision Tree [cite: 21]
-* [cite_start]Random Forest [cite: 21]
-* [cite_start]Gradient Boosting [cite: 21]
-* [cite_start]Gradient Boosting (Tuned) [cite: 21]
+Several classification models were trained and evaluated on the engineered features:
+* Logistic Regression 
+* Decision Tree
+* Random Forest 
+* Gradient Boosting 
+* Gradient Boosting (Tuned)
 
 ### Performance Summary
-[cite_start]Models were evaluated using **Area Under the Curve (AUC)**, precision, and recall[cite: 23].
+Models were evaluated using **Area Under the Curve (AUC)**, precision, and recall.
 
 | Model | AUC Score | Notes |
 | :--- | :--- | :--- |
-| **Gradient Boosting (Tuned)** | **0.9935** | [cite_start]**Best Performer** [cite: 28] |
-| Logistic Regression | 0.9999 | [cite_start]Excellent baseline [cite: 25] |
-| Random Forest | 0.9871 | [cite_start]Strong performance [cite: 26] |
-| Decision Tree | 0.9448 | [cite_start]Reasonable performance [cite: 27] |
+| **Gradient Boosting (Tuned)** | **0.9935** | **Best Performer** |
+| Logistic Regression | 0.9999 | Excellent baseline |
+| Random Forest | 0.9871 | Strong performance |
+| Decision Tree | 0.9448 | Reasonable performance |
 
 ---
 
 ## 🚀 Strategic Recommendations
 
-[cite_start]Based on the model scoring, the following recommendations were made to the marketing team[cite: 29]:
+Based on the model scoring, the following recommendations were made to the marketing team:
 
-* [cite_start]**Targeting Threshold**: Prioritize customers with a predicted influence probability **greater than 0.3**[cite: 30].
-* [cite_start]**Customer Prioritization**: Focus marketing spend on **high-frequency and high-monetary** customers[cite: 31].
-* [cite_start]**Personalization**: Deploy personalized campaigns based on customers' historical transaction patterns[cite: 32].
+* **Targeting Threshold**: Prioritize customers with a predicted influence probability **greater than 0.3**.
+* **Customer Prioritization**: Focus marketing spend on **high-frequency and high-monetary** customers.
+* **Personalization**: Deploy personalized campaigns based on customers' historical transaction patterns.
 
 ## 📈 Future Enhancements
 
-[cite_start]Potential improvements to the model and analysis include[cite: 33]:
-
-* [cite_start]**External Data**: Incorporate demographic or other external data sources[cite: 34].
-* [cite_start]**Advanced Modeling**: Explore deep learning or advanced time-series models[cite: 36].
-* [cite_start]**Channel Data**: Integrate channel interaction data for more granular targeting insights[cite: 37].
-
-***
-
-Does this look like the kind of clear, results-focused summary you were hoping for?
+Potential improvements to the model and analysis include:
+* **External Data**: Incorporate demographic or other external data sources.
+* **Advanced Modeling**: Explore deep learning or advanced time-series models.
+* **Channel Data**: Integrate channel interaction data for more granular targeting insights.
