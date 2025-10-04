@@ -12,12 +12,12 @@ How do we efficiently allocate marketing resources? [cite_start]The core problem
 
 [cite_start]This project followed a standard data science lifecycle, from understanding the business objective to model deployment[cite: 5]:
 
-1.  [cite_start]**Identifying Problems & Understanding Business** [cite: 5]
-2.  [cite_start]**Data Collection** [cite: 5]
-3.  [cite_start]**Data Processing** [cite: 5]
-4.  [cite_start]**Data Analysis** [cite: 5]
-5.  [cite_start]**Data Modeling** [cite: 5]
-6.  [cite_start]**Model Deployment** [cite: 5]
+1.  **Identifying Problems & Understanding Business** 
+2.  **Data Collection** 
+3.  **Data Processing**
+4.  **Data Analysis** 
+5.  **Data Modeling**
+6.  **Model Deployment**
 
 ---
 
