@@ -2,15 +2,15 @@
 
 ## Project Overview
 
-[cite_start]This project focuses on building a predictive model to identify customers most likely to be influenced by a **Direct Mail (DM)** marketing campaign[cite: 1, 4]. [cite_start]The primary goal is to optimize customer targeting by predicting their **influence probability** to maximize the campaign's Return on Investment (ROI)[cite: 5].
+This project focuses on building a predictive model to identify customers most likely to be influenced by a **Direct Mail (DM)** marketing campaign. The primary goal is to optimize customer targeting by predicting their **influence probability** to maximize the campaign's Return on Investment (ROI).
 
 ## The Business Problem
 
-How do we efficiently allocate marketing resources? [cite_start]The core problem was to identify customers who are likely to respond to a Direct Mail campaign[cite: 4]. [cite_start]We achieved this by developing a robust classification model to score each customer's likelihood of making a purchase following the mailing[cite: 59].
+How do we efficiently allocate marketing resources? The core problem was to identify customers who are likely to respond to a Direct Mail campaign. We achieved this by developing a robust classification model to score each customer's likelihood of making a purchase following the mailing.
 
 ## 🧪 Data Science Lifecycle
 
-[cite_start]This project followed a standard data science lifecycle, from understanding the business objective to model deployment[cite: 5]:
+This project followed a standard data science lifecycle, from understanding the business objective to model deployment:
 
 1.  **Identifying Problems & Understanding Business** 
 2.  **Data Collection** 
@@ -24,12 +24,12 @@ How do we efficiently allocate marketing resources? [cite_start]The core problem
 ## 🏗️ Feature Engineering & Target Definition
 
 ### Data Sources
-[cite_start]The analysis utilized two main datasets, joined on `Gold_Cust_ID`[cite: 13, 54]:
-* [cite_start]`Sales_Data.csv`: Transaction-level data including price, units, and channel[cite: 46, 47].
-* [cite_start]`DM_Dates.csv`: Direct Mail send dates per customer[cite: 48, 49].
+The analysis utilized two main datasets, joined on `Gold_Cust_ID`:
+* `Sales_Data.csv`: Transaction-level data including price, units, and channel.
+* `DM_Dates.csv`: Direct Mail send dates per customer.
 
 ### Target Variable: Influenced (1/0)
-[cite_start]A customer was marked as **Influenced (1)** if they made a purchase transaction within **30 days** after the `DM Mail Date`[cite: 17, 18]. [cite_start]The 30-day window was defined as the business's assumption for measuring influence[cite: 35].
+A customer was marked as **Influenced (1)** if they made a purchase transaction within **30 days** after the `DM Mail Date`. The 30-day window was defined as the business's assumption for measuring influence.
 
 [cite_start]$$\text{Target} = 1 \text{ if } (\text{Tran\_Dt} > \text{Last\_Mailing\_Date}) \text{ AND } (\text{Tran\_Dt} \le \text{Last\_Mailing\_Date} + 30)$$ [cite: 17, 18, 19]
 
